@@ -15,17 +15,9 @@ class Cookbook extends Component {
         this.decrease = this.decrease.bind(this)
     }
     // Create two methods... one called increase, and one called decrease. In the increase method, check the value of index to see if it is less than recipes.length - 1. If so, use setState to increment index by 1.
-    increase(){
-        if(this.state.index < this.state.recipes.length - 1){
-            this.setState({ index: this.state.index + 1 })
-        }
-    }
+   
     // In the decrease method, check to see if the value of index is greater than 0. If so, use setState to decrement index by 1.
-    decrease(){
-        if(this.state.index > 0){
-            this.setState({ index: this.state.index - 1 })
-        }
-    }
+    
 
     // Bind these methods, giving them the context of this.
 
@@ -36,12 +28,12 @@ class Cookbook extends Component {
 
         return (
             <div className="container">
-                <RecipeCard recipes={this.state.recipes} index={this.state.index}/>
-                <Nav increase={this.increase} decrease={this.decrease}/>
+                <RecipeCard />
+                <Nav />
             </div>
         )
     }
 
 }
-
+// Test the lag to see if I can check my activity monitor
 export default Cookbook
